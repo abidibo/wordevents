@@ -11,7 +11,7 @@ wordevents requires
 
 - core/1.4.5 
 
-**Include mootools framework and wordevents plugin
+**Include mootools framework and wordevents plugin**
 
 	<script src="path-to-mootools-framework" type="text/javascript"></script>
 	<script src="path-to-wordevents-js" type="text/javascript"></script>
@@ -20,23 +20,23 @@ wordevents requires
 
 Javascript:
 
-  window.addEvent('domready', function() {
+    window.addEvent('domready', function() {
 
-      var dosomething = function(evts) {
-        console.log('you've typed the command "cmd"');
-      }
-      var kw = new wordevents({event_type: 'keydown', acceptedCode: function(code) { return (code > 64 && code < 91) || false; // only [a-z] }});
-      kw.listen(['lol', 'cmd'], [function(evts) { alert('lol'); }, dosomething]);
-      kw.activate();
-  }
+        var dosomething = function(evts) {
+            console.log('you've typed the command "cmd"');
+        }
+        var kw = new wordevents({event_type: 'keydown', acceptedCode: function(code) { return (code > 64 && code < 91) || false; // only [a-z] }});
+        kw.listen(['lol', 'cmd'], [function(evts) { alert('lol'); }, dosomething]);
+        kw.activate();
+    }
 
 For more demos please visit the wordevents demo page at http://www.abidibo.net/projects/js/wordevents/demo
 
 Links
 -----------------
 
-The project page: http://www.abidibo.net/projects/js/wordevents
-The documentation page: http://www.abidibo.net/projects/js/wordevents/doc
-The demo page: http://www.abidibo.net/projects/js/wordevents/demo
+The project page: http://www.abidibo.net/projects/js/wordevents   
+The documentation page: http://www.abidibo.net/projects/js/wordevents/doc   
+The demo page: http://www.abidibo.net/projects/js/wordevents/demo   
 
 Please report bugs, errors and advices in the github project page: http://github.com/abidibo/wordevents
