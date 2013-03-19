@@ -1,6 +1,8 @@
 wordevents
 ===========
 
+![Screenshot](http://github.com/abidibo/wordevents/raw/master/logo.jpg)
+
 wordevents is a class that let's you execute functions when the defined words are typed on the keyboard. Instead of listening to single chars, wordevents can listen to words (a word is considered to be a set of characters typed with a time interval minor than the digit interval option). Callbacks functions are given the list of events which formed the word, the context is set to be the target element.
 It is possible to define which characters are allowed by providing a custion acceptedCode function through options, such function receives the key code of the key pressed and must return true if it accepted, false otherwise.
 
