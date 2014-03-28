@@ -4,7 +4,8 @@ wordevents
 ![Screenshot](http://github.com/abidibo/wordevents/raw/master/logo.jpg)
 
 wordevents is a class that let's you execute functions when the defined words are typed on the keyboard. Instead of listening to single chars, wordevents can listen to words (a word is considered to be a set of characters typed with a time interval minor than the digit interval option). Callbacks functions are given the list of events which formed the word, the context is set to be the target element.
-It is possible to define which characters are allowed by providing a custion acceptedCode function through options, such function receives the key code of the key pressed and must return true if it accepted, false otherwise.
+It is possible to define which characters are allowed by providing a custion acceptedCode function through options, such function receives the event object and must return true if it accepted, false otherwise.
+wordevents allows you to register not only words, but also regular expressions!
 
 How to use
 ----------
@@ -27,8 +28,8 @@ Javascript:
         var dosomething = function(evts) {
             console.log('you've typed the command "cmd"');
         }
-        var kw = new wordevents({event_type: 'keydown', acceptedCode: function(code) { return (code > 64 && code < 91) || false; // only [a-z] }});
-        kw.listen(['lol', 'cmd'], [function(evts) { alert('lol'); }, dosomething]);
+        var kw = new wordevents({event_type: 'keydown', acceptedCode: function(evt) { return (evt.code > 64 && evt.code < 91) || false; // only [a-z] }});
+        kw.listen(['lol', /^7[a-z]*/], [function(evts) { alert('lol'); }, searchme]);
         kw.activate();
     }
 
