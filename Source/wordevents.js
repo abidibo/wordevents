@@ -1,7 +1,6 @@
 /*
 ---
-description: wordevents is a class that let's you execute functions when the defined words are typed on the keyboard. Instead of listening to single chars, wordevents can listen to words (a word is considered to be a set of characters typed with a time interval minor than the digit_interval option). Callbacks functions are given the list of events which formed the word and the word itself, the context is set to be the target element.
-Words can be matched also with regular expressions.
+description: wordevents is a class that let's you execute functions when the defined words are typed on the keyboard. Instead of listening to single chars, wordevents can listen to words (a word is considered to be a set of characters typed with a time interval minor than the digit_interval option). Callbacks functions are given the list of events which formed the word and the word itself, the context is set to be the target element. Words can be matched also with regular expressions.
 
 license: MIT-style
 
